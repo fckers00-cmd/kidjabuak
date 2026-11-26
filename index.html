@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>สมุดคิด(จะ)บวก</title>
+<meta name="theme-color" content="#ffd23f">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="icon-180.png">
+<meta name="apple-mobile-web-app-title" content="คิด(จะ)บวก">
+<style>
+body{margin:0;min-height:100vh;display:grid;place-items:center;background:#ffd23f;color:#2b1a3d;font:18px/1.5 system-ui,sans-serif;text-align:center}
+img{width:120px;height:120px}a{color:#2b1a3d;font-weight:700}
+</style>
+</head>
+<body>
+<main>
+  <img src="icon-512.png" alt="">
+  <h1>สมุดคิด(จะ)บวก</h1>
+  <p id="msg">กำลังเปิด...</p>
+  <p><a id="go" href="https://claude.ai/artifact/ThjorGV7uRfWdYExEtSGJv">แตะเพื่อเปิดสมุด</a></p>
+</main>
+<script>
+// เปิดแอปจริงบน Claude ทันที ยกเว้นตอนกำลังจะเพิ่มลงหน้าจอ (ใส่ ?stay ต่อท้ายลิงก์)
+if (!location.search.includes('stay')) {
+  setTimeout(function(){ location.replace(document.getElementById('go').href); }, 300);
+} else {
+  document.getElementById('msg').textContent = 'กด ⋮ แล้วเลือก "เพิ่มลงในหน้าจอหลัก"';
+}
+</script>
+</body>
+</html>
