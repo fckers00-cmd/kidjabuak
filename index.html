@@ -5,8 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>สมุดคิด(จะ)บวก</title>
 <meta name="theme-color" content="#ffd23f">
-<link rel="manifest" href="manifest.webmanifest">
-<link rel="icon" href="icon.svg" type="image/svg+xml">
+<link rel="manifest" href="manifest.webmanifest?v=2">
+<link rel="icon" href="favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
 <link rel="apple-touch-icon" href="icon-180.png">
 <meta name="apple-mobile-web-app-title" content="คิด(จะ)บวก">
 <style>
@@ -26,7 +27,7 @@ img{width:120px;height:120px}a{color:#2b1a3d;font-weight:700}
 if (!location.search.includes('stay')) {
   setTimeout(function(){ location.replace(document.getElementById('go').href); }, 300);
 } else {
-  document.getElementById('msg').textContent = 'กด ⋮ แล้วเลือก "เพิ่มลงในหน้าจอหลัก"';
+  document.getElementById('msg').textContent = 'กด ⋮ แล้วเลือก Install app / Add to Home screen';
 }
 </script>
 </body>
